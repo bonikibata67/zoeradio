@@ -1,0 +1,85 @@
+/* Ensure the footer is styled correctly and responsive */
+.footer {
+    background-color: #011638;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Styling for footer content */
+.footer-content p {
+    margin: 0;
+}
+
+.footer h5 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Social icons section */
+.social-icons-section {
+    margin-top: 10px;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+}
+
+.social-icon-link {
+    color: #fff; /* Default icon color */
+    font-size: 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #69727d; /* Default background color */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.social-icon-link.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon-link.youtube {
+    background-color: #cd201f;
+}
+
+.social-icon-link.instagram {
+    background-color: #262626;
+}
+
+.social-icon-link:hover {
+    color: #fff; /* Hover color for better visibility */
+    background-color: #555; /* Darker background on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 0;
+    }
+
+    .footer h5 {
+        font-size: 16px;
+    }
+
+    .social-icons-wrapper {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-icon-link {
+        font-size: 20px;
+    }
+}

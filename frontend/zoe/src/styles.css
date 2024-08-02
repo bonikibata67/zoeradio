@@ -1,0 +1,200 @@
+/* Ensure the body and html elements take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox container for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    margin: 0;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Allows the main content to grow and take available space */
+    padding: 20px; /* Add padding if needed */
+    margin-top: 20vh; /* Adjust for header height */
+    margin-bottom: 50px; /* Adjust for footer height */
+}
+
+/* Header styles */
+header {
+    background-color: #011638;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 20vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo container styles */
+.logo-container {
+    flex: 0 0 20%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo image styles */
+.custom-logo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Navigation styles */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s linear;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #EEC643;
+}
+
+/* Register button styles */
+.register-container {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register-button {
+    background-color: #EEC643;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #011638;
+    font-weight: bold;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.register-button:hover {
+    background-color: #d4b332;
+    color: white;
+}
+
+/* Footer styles */
+footer {
+    background-color: #011638;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+}
+
+/* Styling for footer content */
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content h5 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Social icons section */
+.social-icons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon-link {
+    color: #fff;
+    font-size: 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #69727d;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.social-icon-link.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon-link.youtube {
+    background-color: #cd201f;
+}
+
+.social-icon-link.instagram {
+    background-color: #262626;
+}
+
+.social-icon-link:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .register-container {
+        justify-content: center;
+    }
+
+    .footer-content h5 {
+        font-size: 16px;
+    }
+
+    .social-icons-wrapper {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-icon-link {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-image {
+        width: 100%;
+    }
+}
