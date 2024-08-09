@@ -1,55 +1,73 @@
 /* Container for both text/button and image slider */
 .home-container {
+    position: relative;
     display: flex;
-    flex-direction: column; /* Ensure vertical stacking of sections */
+    flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
     background-color: white;
-    padding: 20px; /* Increase padding for better spacing */
+    gap: 20px;
     box-sizing: border-box;
-    min-height: 400px; /* Minimum height to create space above the footer */
-    margin-bottom: 50px; /* Space to ensure content is not sticking to the footer */
+}
+
+/* .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-image: url('https://media.istockphoto.com/id/1665393390/photo/professional-radio-station-equipment-and-on-air-sign.jpg?s=2048x2048&w=is&k=20&c=a5Brph93wtUoeb4BRyXnvam3GjseXOsD32etz0N8K2w=');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+} */
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 .textimage {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     width: 100%;
-    margin-bottom: 20px; /* Space between sections */
+    margin-top: -10px;
+  
 }
 
 /* Flexbox for text and button */
 .text-and-button {
     flex: 1;
     max-width: 48%;
-    margin-right: 20px; /* Space between text/button and image slider */
+    margin-right: 20px;
     background-color: #EEC643;
-    padding: 20px; /* Add padding inside the text-and-button box */
+    padding: 20px;
     box-sizing: border-box;
-    border-radius: 8px; /* Rounded corners for the box */
+    border-radius: 8px;
 }
 
 .bold-text {
-    color: white; /* Bold text color */
+    color: white;
     font-weight: bold;
-    font-size: 1.2rem; /* Adjust font size as needed */
-    margin-bottom: 20px; /* Space between text and button */
-    line-height: 1.6; /* Improve readability */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 /* Button styles */
 .elementor-button-link {
     background-color: white;
-    color: #011638; /* Button text color */
-    border: 2px solid #011638; /* Border color */
+    color: #011638;
+    border: 2px solid #011638;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem; /* Adjust font size as needed */
+    font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -59,7 +77,6 @@
     color: white;
 }
 
-/* Image slider styles */
 .image-slider {
     flex: 1;
     max-width: 48%;
@@ -81,52 +98,67 @@
     opacity: 0;
 }
 
-/* Show the first image initially */
 .slider-image:nth-child(1) {
     opacity: 1;
 }
 
-/* New section: text and image side by side */
+.textimage1 {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.zoetext {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 48%;
+}
+
 .textimage1 .text-and-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #EEC643;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 8px;
 }
 
+.bold-text1 {
+    color: #EEC643;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
 .textimage1 .image-box {
     max-width: 48%;
     flex: 1;
-    margin-right: 20px; /* Space between image and text */
+    margin-right: 20px;
 }
 
 .image-box-img {
     width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners for the image */
+    height: 100%;
+    border-radius: 8px;
 }
 
-/* Centered image near the footer */
 .centered-image {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .footer-image {
     width: auto;
     max-width: 200px;
     height: auto;
-    border-radius: 8px; /* Rounded corners for the image */
+    border-radius: 8px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column;
@@ -134,13 +166,24 @@
         padding: 20px 10px;
     }
 
-    .text-and-button, .text-and-image {
+    .text-and-button,
+    .text-and-image {
         max-width: 100%;
         margin-right: 0;
-        margin-bottom: 20px; /* Space between sections in vertical layout */
+        margin-bottom: 20px;
     }
 
-    .image-slider, .image-box {
+    .image-slider,
+    .image-box {
         max-width: 100%;
+    }
+
+    .zoetext {
+        width: 100%;
+    }
+
+    .textimage1 .text-and-image {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
