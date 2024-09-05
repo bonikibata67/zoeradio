@@ -1,17 +1,14 @@
 header {
   margin: 0;
   padding: 0;
-  
 }
-.headercont{
+
+.headercont {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #011638;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 10px 20px;
   height: 20vh;
   width: 100%;
@@ -19,7 +16,6 @@ header {
   top: 0;
   z-index: 1000;
   box-sizing: border-box;
-  gap: 10px;
 }
 
 .logo-container {
@@ -39,10 +35,13 @@ header {
 }
 
 .audio-player-container {
-  /* flex: 0 0 40%;  */
+  background-color: #EEC643;
+  text-align: center;
+  padding: 20px;
+  flex: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex: auto;
 }
 
 audio {
